@@ -1,0 +1,51 @@
+print("===================================")
+print("     MOVIE RECOMMENDATION SYSTEM")
+print("===================================")
+movies = {
+    "action": [
+        "Avengers",
+        "John Wick",
+        "Batman",
+        "Mission Impossible"
+    ],  
+    "comedy": [
+        "Mr Bean",
+        "The Mask",
+        "Friends",
+        "Home Alone"
+    ],
+    "horror": [
+        "Conjuring",
+        "Nun",
+        "Insidious",
+        "Annabelle"
+    ],
+    "romance": [
+        "Titanic",
+        "La La Land",
+        "The Notebook",
+        "Your Name"
+    ],
+    "science fiction": [
+        "Interstellar",
+        "Inception",
+        "Avatar",
+        "The Matrix"
+    ]
+}
+print("\nAvailable Genres:")
+print("- Action")
+print("- Comedy")
+print("- Horror")
+print("- Romance")
+print("- Science Fiction")
+genre = input("\nEnter your favorite genre: ").lower()
+if genre in movies:
+    print("\nRecommended Movies For You:\n")
+    count = 1
+    for movie in movies[genre]:
+        print(count, ".", movie)
+        count += 1
+else:
+    print("\nSorry! Genre not available.")
+print("\nThank you for using the Movie Recommendation System!")
